@@ -91,9 +91,8 @@ class LandingTemplate extends Component {
             className="skip_icon"
             src={skip_icon}
             alt=""
-            onClick={() => {
-              alert("skip clicked");
-            }}
+            onClick={this.cameraClick}
+            hidden={this.state.step === 3}
           />
           <input
             type="file"
