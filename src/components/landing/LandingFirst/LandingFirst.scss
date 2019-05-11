@@ -8,12 +8,22 @@
       width: 132px;
       height: 137px;
     }
-    .next_icon {
-      position: absolute;
-      width: 20px;
-      height: 37px;
-      right: 30px;
-      bottom: 266px;
+    #main_phrase {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-top: 68px;
+      margin-left: 30px;
+      .phrase1 {
+        width: 243px;
+        height: 74px;
+      }
+      .next_icon {
+        width: 20px;
+        height: 37px;
+        margin-right: 37px;
+        margin-top: 19px;
+      }
     }
     .footer {
       display: flex;
