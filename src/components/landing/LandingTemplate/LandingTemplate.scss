@@ -13,7 +13,14 @@
       width: 20px;
       height: 37px;
       right: 30px;
-      bottom: 266px;
+      top: 320px;
+    }
+    .cam_icon {
+      position: absolute;
+      right: 30px;
+      top: 320px;
+      width: 58px;
+      height: 58px;
     }
     .footer {
       display: flex;
@@ -38,36 +45,3 @@
   }
 }
 
-.active {
-  -webkit-animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-/**
- * ----------------------------------------
- * animation slide-out-left
- * ----------------------------------------
- */
-@-webkit-keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-}
-@keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-}
