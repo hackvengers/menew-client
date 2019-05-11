@@ -29,3 +29,25 @@
     height: 18px;
   }
 }
+.rest-area{
+  margin-top: 5px;
+  background: lightgray;
+  .box{
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:5px;
+    margin-right:5px;
+    background:white;
+    .nametag{
+      margin-top: 10px;
+      margin-left: 24px;  
+      color:#ff6b06;
+    }
+    .comment{
+      margin-left: 24px;
+      margin-top: 5px;
+      color:black;
+    }
+  }
+}
