@@ -46,7 +46,10 @@ class OcrTemplate extends Component {
               MenuAPI.getMenuText({ query: menuName, target: "ko" }).then(
                 res => {
                   const { translatedText } = res.data;
-                  alert(translatedText);
+                  this.props.history.push({
+                    pathname: "/info",
+                    state: { translatedText, menuName }
+                  });
                 }
               );
             }}

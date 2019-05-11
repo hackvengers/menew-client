@@ -1,12 +1,12 @@
-import React from 'react';
-import './MenuName.scss';
+import React from "react";
+import "./MenuName.scss";
 
-const MenuName = () => {
+const MenuName = ({ translatedText, menuName }) => {
   return (
     <div className="menu-name-container">
       <div className="menu_name">
-        <p className="kor">김치볶음밥</p>
-        <p className="eng">Kimchi fried rice</p>
+        <p className="kor">{translatedText}</p>
+        <p className="eng">{menuName}</p>
       </div>
       <div className="menu_summary">
         Lorem ipsum dolor sit amet, consectetur
