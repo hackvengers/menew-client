@@ -1,32 +1,83 @@
-@media screen and (min-width: 360px) {
+@media only screen and (min-width: 360px) {
   .landing {
+    display: flex;
+    flex-flow: column nowrap;
     #main_logo {
       margin-top: 102px;
       margin-left: 26px;
+      width: 132px;
+      height: 137px;
     }
     #main_phrase {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       margin-top: 68px;
-      margin-left: 29px;
+      margin-left: 30px;
       .phrase1 {
-        width: 180px;
-        height: 60px;
+        width: 243px;
+        height: 74px;
       }
       .next_icon {
+        width: 20px;
+        height: 37px;
         margin-right: 37px;
-        margin-bottom: 10px;
+        margin-top: 19px;
       }
     }
     .footer {
+      display: flex;
+      flex-flow: row nowrap;
       position: absolute;
+      width: 100%;
       bottom: 28px;
-      right: 30px;
+      justify-content: center;
       .progress_icon {
-        margin-right: 104px;
-        margin-bottom: 4px;
+        display: block;
+        width: 33px;
+        height: 7px;
+      }
+      .skip_icon {
+        position: absolute;
+        width: 29px;
+        height: 13px;
+        right: 30px;
+        bottom: 1px;
       }
     }
+  }
+}
+
+.active {
+  -webkit-animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/**
+ * ----------------------------------------
+ * animation slide-out-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
   }
 }
