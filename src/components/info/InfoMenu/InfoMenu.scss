@@ -1,0 +1,13 @@
+.info-menu-area {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 50px;
+  margin-left: 13px;
+  div {
+    margin: 17px;
+    border-bottom: 20px;
+    border-color: #61dafb;
+    font-family: "Avenir-Heavy";
+    font-weight: 600;
+  }
+}

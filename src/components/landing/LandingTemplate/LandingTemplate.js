@@ -5,12 +5,12 @@ import LandingFirst from "components/landing/LandingFirst";
 import LandingSecond from "components/landing/LandingSecond";
 import LandingThird from "components/landing/LandingThird";
 
-import skip_icon from "static/1_common/1_common_skip.png";
-import next_icon from "static/1_common/1_common_next_icon.png";
-import cam_icon from "static/1-3/1_3_camera_icon.png";
-import progress_icon1 from "static/1-1/1_1_circle.png";
-import progress_icon2 from "static/1-2/1_2_circle.png";
-import progress_icon3 from "static/1-3/1_3_circle.png";
+import skip_icon from "static/1/1_common/1_common_skip.png";
+import next_icon from "static/1/1_common/1_common_next_icon.png";
+import cam_icon from "static/1/1-3/1_3_camera_icon.png";
+import progress_icon1 from "static/1/1-1/1_1_circle.png";
+import progress_icon2 from "static/1/1-2/1_2_circle.png";
+import progress_icon3 from "static/1/1-3/1_3_circle.png";
 import * as MenuAPI from "lib/api/menu";
 
 class LandingTemplate extends Component {

@@ -1,0 +1,13 @@
+.info-container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 33px;
+  #info_exit_area {
+    img {
+      float: right;
+      width: 19px;
+      height: 19px;
+      margin-right: 30px;
+    }
+  }
+}
