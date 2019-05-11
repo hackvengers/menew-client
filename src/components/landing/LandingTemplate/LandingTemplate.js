@@ -77,7 +77,7 @@ class LandingTemplate extends Component {
       this.props.history.push({
         pathname: "/ocr",
         state: {
-          imageUrl: `http://106.10.50.141:8000/uploads/${imageUrl}`,
+          imageUrl: `http://localhost:8000/uploads/resize/${imageUrl}`,
           regions: result.regions
         }
       });
