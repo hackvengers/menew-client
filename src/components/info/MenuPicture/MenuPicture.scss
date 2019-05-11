@@ -2,3 +2,18 @@
   position: absolute;
   bottom: 0;
 }
+.picture-area {
+  display: flex; /* establish flex container */
+  flex-wrap: wrap; /* enable flex items to wrap */
+  justify-content: space-around;
+  width: 100%;
+}
+.cell {
+  flex: 0 0 32%; /* don't grow, don't shrink, width */
+  height: 105px;
+  margin-bottom: 5px;
+  background-color: #999;
+}
+.cell:nth-child(3n) {
+  background-color: #f00;
+}

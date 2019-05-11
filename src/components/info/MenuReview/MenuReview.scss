@@ -1,4 +1,31 @@
 .review-area {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  .footer {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 55px;
+    background: #ff6b06;
+  }
+  #comment-area {
+    width: 90%;
+    height: 35px;
+    margin: 8px 18px;
+    border-radius: 10px;
+    border: 0;
+  }
+  #comment-area::placeholder {
+    padding-left: 15px;
+    font-size: 15px;
+    color: #C0C0C0;
+  }
+  #sendIcon {
+    position: absolute;
+    bottom: 18px;
+    right: 35px;
+    width: 18px;
+    height: 18px;
+  }
 }
