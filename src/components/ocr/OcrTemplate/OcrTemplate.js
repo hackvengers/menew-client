@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./OcrTemplate.scss";
+import * as MenuAPI from "lib/api/menu";
 
 class OcrTemplate extends Component {
   state = {
-    boundingBoxList: []
+    boundingBoxList: [],
+    clickedBox: null
   };
 
   componentDidMount = () => {
@@ -16,8 +18,19 @@ class OcrTemplate extends Component {
     regions.forEach((region, regionIndex) => {
       region.lines.forEach((line, lineIndex) => {
         const coord = line.boundingBox.split(",");
+
+        let menuName = "";
+        line.words.forEach(word => {
+          menuName = menuName.concat(word.text, " ");
+        });
+
         boundingBoxList.push(
           <div
+            className={
+              this.state.clickedBox === regionIndex + "_" + lineIndex
+                ? "checked"
+                : undefined
+            }
             style={{
               display: "inline-block",
               border: "3px solid #00FF00",
@@ -29,6 +42,14 @@ class OcrTemplate extends Component {
               zIndex: "1"
             }}
             key={regionIndex + "_" + lineIndex}
+            onClick={() => {
+              MenuAPI.getMenuText({ query: menuName, target: "ko" }).then(
+                res => {
+                  const { translatedText } = res.data;
+                  alert(translatedText);
+                }
+              );
+            }}
           />
         );
       });
