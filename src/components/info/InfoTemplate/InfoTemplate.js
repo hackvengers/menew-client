@@ -27,13 +27,13 @@ class InfoTemplate extends Component {
   };
 
   render() {
-    const { translatedText, menuName } = this.props.location.state;
+    // const { translatedText, menuName } = this.props.location.state;
     return (
       <div className="info-container">
         <div id="info_exit_area">
           <img src={exitIcon} alt="" />
         </div>
-        <MenuName translatedText={translatedText} menuName={menuName} />
+        {/*<MenuName translatedText={translatedText} menuName={menuName} />*/}
         <InfoMenu callback={this.myCallBack} />
         {this.showInfoMenu()}
       </div>
