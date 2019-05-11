@@ -10,7 +10,7 @@ import exitIcon from 'static/2/2_common/2_X_icon.png';
 
 class InfoTemplate extends Component {
   state = {
-    curTab: 'about'
+    curTab: 'image'
   };
 
   myCallBack = (data) => {

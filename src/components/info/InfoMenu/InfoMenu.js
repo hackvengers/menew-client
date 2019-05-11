@@ -4,7 +4,7 @@ import './InfoMenu.scss';
 
 const InfoMenu = (props) => {
 
-  const [curTab, setCurTab] = useState("image-tab");
+  const [curTab, setCurTab] = useState("image");
 
   const tabClick = (e) => {
     setCurTab(e);
