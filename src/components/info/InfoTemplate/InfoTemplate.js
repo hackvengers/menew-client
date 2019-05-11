@@ -13,6 +13,12 @@ class InfoTemplate extends Component {
     curTab: 'about'
   };
 
+  myCallBack = (data) => {
+    this.setState({
+      curTab: data
+    })
+  };
+
   showInfoMenu = () => {
     if(this.state.curTab === 'image') return <MenuPicture/>;
     if(this.state.curTab === 'about') return <MenuAbout/>;
@@ -26,7 +32,9 @@ class InfoTemplate extends Component {
           <img src={exitIcon} alt=""/>
         </div>
         <MenuName/>
-        <InfoMenu/>
+        <InfoMenu
+          callback={this.myCallBack}
+        />
         {this.showInfoMenu()}
       </div>
     );
