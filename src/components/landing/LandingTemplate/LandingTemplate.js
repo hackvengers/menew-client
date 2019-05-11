@@ -71,11 +71,15 @@ class LandingTemplate extends Component {
   handleFileChange = event => {
     const formData = new FormData();
     formData.append("photo", event.target.files[0]);
+
     MenuAPI.getOcrBoundingBox({ formData }).then(res => {
-      const { regions } = res.data;
+      const { imageUrl, result } = res.data;
       this.props.history.push({
         pathname: "/ocr",
-        state: regions
+        state: {
+          imageUrl: `http://106.10.50.141:8000/uploads/${imageUrl}`,
+          regions: result.regions
+        }
       });
     });
   };
