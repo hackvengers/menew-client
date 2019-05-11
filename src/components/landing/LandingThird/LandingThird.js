@@ -1,7 +1,7 @@
 import React from 'react';
 import './LandingThird.scss';
-import foodImg from 'static/1-3/1_3_img.png';
-import phrase3 from 'static/1-3/1_3_text.png';
+import foodImg from 'static/1/1-3/1_3_img.png';
+import phrase3 from 'static/1/1-3/1_3_text.png';
 
 const LandingThird = (props) => {
 

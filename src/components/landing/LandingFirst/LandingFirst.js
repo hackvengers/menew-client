@@ -1,7 +1,7 @@
 import React from 'react';
 import './LandingFirst.scss';
-import logo from 'static/1-1/1_1_logo.png';
-import phrase1 from 'static/1-1/1_1_text.png';
+import logo from 'static/1/1-1/1_1_logo.png';
+import phrase1 from 'static/1/1-1/1_1_text.png';
 
 const LandingFirst = (props) => {
 
