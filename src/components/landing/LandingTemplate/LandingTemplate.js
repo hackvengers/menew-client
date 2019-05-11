@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './LandingTemplate.scss';
 import LandingFirst from 'components/landing/LandingFirst';
 import LandingSecond from 'components/landing/LandingSecond';
+import LandingThird from "components/landing/LandingThird";
+
 import skip_icon from 'static/1_common/1_common_skip.png';
 import next_icon from 'static/1_common/1_common_next_icon.png';
 import cam_icon from 'static/1-3/1_3_camera_icon.png';
@@ -26,6 +28,7 @@ class LandingTemplate extends Component {
     const {step} = this.state;
     if(step === 1) return  <LandingFirst step={this.state.step}/>;
     if(step === 2) return  <LandingSecond step={this.state.step}/>;
+    if(step === 3) return  <LandingThird step={this.state.step}/>;
   };
 
   getProgressImg = () => {
@@ -37,8 +40,12 @@ class LandingTemplate extends Component {
 
   getNextImg = () => {
     const {step} = this.state;
-    if (step === 3) return <img className="cam_icon" src={cam_icon} alt=""/>;
+    if (step === 3) return <img className="cam_icon" src={cam_icon} alt="" onClick={this.cameraClick}/>;
     else return <img className="next_icon" src={next_icon} alt="" onClick={this.toggle}/>
+  };
+
+  cameraClick = () => {
+    this.upload.click();
   };
 
   render() {
@@ -48,8 +55,8 @@ class LandingTemplate extends Component {
         {this.getNextImg()}
         <div className="footer">
           {this.getProgressImg()}
-          {/*<img className="skip_icon" src={skip_icon} alt="" onClick={()=>{alert("skip clicked")}}/>*/}
-          <input type="file" id="camera" accept="image/*" capture="camera"/>
+          <img className="skip_icon" src={skip_icon} alt="" onClick={()=>{alert("skip clicked")}}/>
+          <input type="file" id="camera" accept="image/*" capture="camera" ref={ref => {this.upload = ref;}} hidden/>
         </div>
       </div>
     )
