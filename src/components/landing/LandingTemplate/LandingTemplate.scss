@@ -1,0 +1,32 @@
+@media screen and (min-width: 360px) {
+  .landing {
+    #main_logo {
+      margin-top: 102px;
+      margin-left: 26px;
+    }
+    #main_phrase {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-top: 68px;
+      margin-left: 29px;
+      .phrase1 {
+        width: 180px;
+        height: 60px;
+      }
+      .next_icon {
+        margin-right: 37px;
+        margin-bottom: 10px;
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 28px;
+      right: 30px;
+      .progress_icon {
+        margin-right: 104px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

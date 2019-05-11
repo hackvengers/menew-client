@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+#textTest {
+  background: url("../static/1_1_text.png") center center no-repeat;
+  width: 242px;
+  height: 74px;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
