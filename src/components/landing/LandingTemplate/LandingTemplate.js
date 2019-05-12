@@ -28,7 +28,7 @@ class LandingTemplate extends Component {
 
   getLandingPage = () => {
     const { step } = this.state;
-    if (step === 0) return <LoadingPage/>;
+    if (step === 0) return <LoadingPage step={this.state.step}/>;
     if (step === 1) return <LandingFirst step={this.state.step} />;
     if (step === 2) return <LandingSecond step={this.state.step} />;
     if (step === 3) return <LandingThird step={this.state.step} />;

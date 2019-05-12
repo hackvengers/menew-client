@@ -8,7 +8,7 @@ const LandingFirst = (props) => {
   const fadeOut = props.step;
 
   return (
-    <div className={fadeOut !== 1 ? "main-container nonactive" : "main-container"}>
+    <div className={fadeOut !== 1 ? "main-container nonactive" : "main-container active"}>
       <img id="main_logo" src={logo} alt=""/>
       <div id="main_phrase">
         <img className="phrase1" src={phrase1} alt=""/>
