@@ -24,7 +24,9 @@ class InfoTemplate extends Component {
 
   showInfoMenu = () => {
     const { urls } = this.state;
-    if (this.state.curTab === "image") return <MenuPicture urls={urls} />;
+    if (this.state.curTab === "image" && urls !== null) {
+      return <MenuPicture urls={urls} />;
+    }
     if (this.state.curTab === "about") return <MenuAbout />;
     if (this.state.curTab === "review") return <MenuReview />;
   };
@@ -38,6 +40,7 @@ class InfoTemplate extends Component {
       sourceLang: "en",
       targetLang: "ko"
     }).then(res => {
+      console.log(res.data);
       const { urls } = res.data;
       this.setState({
         ...this.state,
