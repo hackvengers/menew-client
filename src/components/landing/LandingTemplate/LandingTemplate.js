@@ -91,7 +91,7 @@ class LandingTemplate extends Component {
       this.setState({
         step: 1
       })
-    },3000);
+    },2000);
   }
 
   render() {
@@ -119,6 +119,12 @@ class LandingTemplate extends Component {
             onChange={this.handleFileChange}
             hidden
           />
+          {/*<div id="lds-ring">*/}
+            {/*<div></div>*/}
+            {/*<div></div>*/}
+            {/*<div></div>*/}
+            {/*<div></div>*/}
+          {/*</div>*/}
         </div>
       </div>
     );
