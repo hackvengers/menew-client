@@ -1,36 +1,82 @@
-import React from 'react';
-import './MenuReview.scss';
-import sendIcon from 'static/2/2-3/2_3_send_ui.png';
+import React, { Component, Fragment } from "react";
+import "./MenuReview.scss";
+import sendIcon from "static/2/2-3/2_3_send_ui.png";
+import * as CommentAPI from "lib/api/comment";
 
-const MenuReview = () => {
-  return (
-    <div className="review-area">
+class MenuReview extends Component {
+  state = {
+    comments: [],
+    content: ""
+  };
 
-    <div className="rest-area">
-      <div className="box">
-        <div className="nametag">Anonymous1</div>
-        <div className="comment">loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDo</div>
-      </div>
-      <div className="box">
-        <div className="nametag">Anonymous2</div>
-        <div className="comment">loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDo</div>
-      </div>
-      <div className="box">
-        <div className="nametag">Anonymous3</div>
-        <div className="comment">loremIpsumDolorSitAmetConsecteturAdipiscingElitSedDo</div>
-      </div>
-    </div>
+  handleChange = event => {
+    this.setState({
+      content: event.target.value
+    });
+  };
 
+  handleSubmit = () => {
+    const { content } = this.state;
+    CommentAPI.writeComment({ content }).then(res => {
+      this.refreshComments();
+    });
+  };
 
-    <div className="footer">
-      <input type="text" id="comment-area" placeholder="Enter your comments"/>
-      <img id="sendIcon" src={sendIcon} alt=""/>
-    </div>
+  handleKeyPress = event => {
+    if (event.key === "Enter") {
+      this.handleSubmit();
+    }
+  };
 
-    </div>
+  refreshComments = () => {
+    CommentAPI.listComment().then(res => {
+      const { message } = res.data;
+      this.setState({
+        ...this.state,
+        comments: message.reverse()
+      });
+    });
+  };
 
-    
-  );
-};
+  componentDidMount = () => {
+    this.refreshComments();
+  };
+
+  render() {
+    return (
+      <Fragment>
+        <div className="rest-area">
+          {this.state.comments.map((comment, index) => {
+            return (
+              <div className="box" key={index}>
+                <div className="nametag">{`Anonymous${index}`}</div>
+                <div className="comment">{comment.content}</div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="review-area">
+          <div className="footer">
+            <input
+              type="text"
+              id="comment-area"
+              placeholder="Enter your comments"
+              value={this.state.content}
+              onChange={this.handleChange}
+              onKeyPress={this.handleKeyPress}
+            />
+            <img
+              id="sendIcon"
+              src={sendIcon}
+              alt="send"
+              onClick={this.handleSubmit}
+            />
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
+}
 
 export default MenuReview;
