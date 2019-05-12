@@ -4,6 +4,7 @@ import "./LandingTemplate.scss";
 import LandingFirst from "components/landing/LandingFirst";
 import LandingSecond from "components/landing/LandingSecond";
 import LandingThird from "components/landing/LandingThird";
+import LoadingPage from "components/loading/LoadingPage";
 
 import skip_icon from "static/1/1_common/1_common_skip.png";
 import next_icon from "static/1/1_common/1_common_next_icon.png";
@@ -15,7 +16,7 @@ import * as MenuAPI from "lib/api/menu";
 
 class LandingTemplate extends Component {
   state = {
-    step: 1
+    step: 0
   };
 
   toggle = () => {
@@ -27,6 +28,7 @@ class LandingTemplate extends Component {
 
   getLandingPage = () => {
     const { step } = this.state;
+    if (step === 0) return <LoadingPage/>;
     if (step === 1) return <LandingFirst step={this.state.step} />;
     if (step === 2) return <LandingSecond step={this.state.step} />;
     if (step === 3) return <LandingThird step={this.state.step} />;
@@ -83,6 +85,14 @@ class LandingTemplate extends Component {
       });
     });
   };
+
+  componentDidMount() {
+    setTimeout(()=> {
+      this.setState({
+        step: 1
+      })
+    },3000);
+  }
 
   render() {
     return (
