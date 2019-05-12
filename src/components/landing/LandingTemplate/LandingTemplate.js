@@ -16,12 +16,14 @@ import * as MenuAPI from "lib/api/menu";
 
 class LandingTemplate extends Component {
   state = {
-    step: 0
+    step: 0,
+    loading: false
   };
 
   toggle = () => {
     let step = this.state.step;
     this.setState({
+      ...this.state,
       step: step + 1
     });
   };
@@ -73,15 +75,24 @@ class LandingTemplate extends Component {
   handleFileChange = event => {
     const formData = new FormData();
     formData.append("photo", event.target.files[0]);
+    this.setState({
+      ...this.state,
+      loading: true
+    });
 
     MenuAPI.getOcrBoundingBox({ formData }).then(res => {
       const { imageUrl, result } = res.data;
-      this.props.history.push({
-        pathname: "/ocr",
-        state: {
-          imageUrl: `http://localhost:8000/uploads/resize/${imageUrl}`,
-          regions: result.regions
-        }
+      this.setState({
+        ...this.state,
+        loading: false
+      }, () => {
+        this.props.history.push({
+          pathname: "/ocr",
+          state: {
+            imageUrl: `http://localhost:8000/uploads/resize/${imageUrl}`,
+            regions: result.regions
+          }
+        });
       });
     });
   };
@@ -119,13 +130,14 @@ class LandingTemplate extends Component {
             onChange={this.handleFileChange}
             hidden
           />
-          {/*<div id="lds-ring">*/}
-            {/*<div></div>*/}
-            {/*<div></div>*/}
-            {/*<div></div>*/}
-            {/*<div></div>*/}
-          {/*</div>*/}
-        </div>
+          {this.state.loading && (<div id="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+            )}
+          </div>
       </div>
     );
   }
