@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import "./OcrTemplate.scss";
 import * as MenuAPI from "lib/api/menu";
+import ExifOrientationImg from "react-exif-orientation-img";
 
 class OcrTemplate extends Component {
   state = {
@@ -69,7 +70,7 @@ class OcrTemplate extends Component {
     return (
       <div className="OcrTemplate">
         <div className="bounding-wrapper">
-          {imageUrl && <img src={imageUrl} alt="menu" />}
+          {imageUrl && <ExifOrientationImg src={imageUrl} alt="menu" />}
           {this.state.boundingBoxList}
         </div>
       </div>

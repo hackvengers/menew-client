@@ -128,7 +128,7 @@ class LandingTemplate extends Component {
             type="file"
             id="camera"
             accept="image/*"
-            capture="camera"
+            capture="environment"
             ref={ref => {
               this.upload = ref;
             }}
