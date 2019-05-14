@@ -4,7 +4,7 @@ import defaultClient from "lib/defaultClient";
 export const getOcrBoundingBox = ({ formData }) => {
   return axios({
     method: "post",
-    url: "http://localhost:8000/api/menu",
+    url: `http://${process.env.REACT_APP_API_URL}/api/menu`,
     data: formData,
     config: { headers: { "Content-Type": "multipart/form-data" } }
   });

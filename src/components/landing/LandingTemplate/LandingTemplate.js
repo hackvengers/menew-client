@@ -30,7 +30,7 @@ class LandingTemplate extends Component {
 
   getLandingPage = () => {
     const { step } = this.state;
-    if (step === 0) return <LoadingPage step={this.state.step}/>;
+    if (step === 0) return <LoadingPage step={this.state.step} />;
     if (step === 1) return <LandingFirst step={this.state.step} />;
     if (step === 2) return <LandingSecond step={this.state.step} />;
     if (step === 3) return <LandingThird step={this.state.step} />;
@@ -82,27 +82,32 @@ class LandingTemplate extends Component {
 
     MenuAPI.getOcrBoundingBox({ formData }).then(res => {
       const { imageUrl, result } = res.data;
-      this.setState({
-        ...this.state,
-        loading: false
-      }, () => {
-        this.props.history.push({
-          pathname: "/ocr",
-          state: {
-            imageUrl: `http://localhost:8000/uploads/resize/${imageUrl}`,
-            regions: result.regions
-          }
-        });
-      });
+      this.setState(
+        {
+          ...this.state,
+          loading: false
+        },
+        () => {
+          this.props.history.push({
+            pathname: "/ocr",
+            state: {
+              imageUrl: `http://${
+                process.env.REACT_APP_API_URL
+              }/uploads/resize/${imageUrl}`,
+              regions: result.regions
+            }
+          });
+        }
+      );
     });
   };
 
   componentDidMount() {
-    setTimeout(()=> {
+    setTimeout(() => {
       this.setState({
         step: 1
-      })
-    },2000);
+      });
+    }, 2000);
   }
 
   render() {
@@ -130,14 +135,15 @@ class LandingTemplate extends Component {
             onChange={this.handleFileChange}
             hidden
           />
-          {this.state.loading && (<div id="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-            )}
-          </div>
+          {this.state.loading && (
+            <div id="lds-ring">
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+          )}
+        </div>
       </div>
     );
   }
