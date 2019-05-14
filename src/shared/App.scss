@@ -1,0 +1,11 @@
+.App {
+  height: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
