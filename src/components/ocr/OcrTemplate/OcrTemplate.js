@@ -65,19 +65,12 @@ class OcrTemplate extends Component {
 
   render() {
     const { imageUrl } = this.props.location.state;
-    console.log(imageUrl);
 
     return (
       <div className="OcrTemplate">
-        <div className="bounding-wrapper" style={{ position: "relative" }}>
+        <div className="bounding-wrapper">
+          {imageUrl && <img src={imageUrl} alt="menu" />}
           {this.state.boundingBoxList}
-          {imageUrl && (
-            <img
-              src={imageUrl}
-              style={{ position: "absolute", top: 0, left: 0 }}
-              alt="menu"
-            />
-          )}
         </div>
       </div>
     );
