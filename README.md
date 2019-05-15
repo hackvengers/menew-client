@@ -6,15 +6,13 @@
 
 ## Overview
 
-<img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/1.png" width="200" alt="1"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/2.png" width="200" alt="2"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/3.png" width="200" alt="3">
-
-<img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/4.png" width="200" alt="4"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/5.png" width="200" alt="5"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/6.png" width="200" alt="6">
-
-<img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/7.png" width="200" alt="7"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/8.png" width="200" alt="8">
+<img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/1.png" width="200" alt="1"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/2.png" width="200" alt="2"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/3.png" width="200" alt="3"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/4.png" width="200" alt="4"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/5.png" width="200" alt="5"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/6.png" width="200" alt="6"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/7.png" width="200" alt="7"> <img src="https://raw.githubusercontent.com/hackvengers/menew-plan/master/screenshot/8.png" width="200" alt="8">
 
 ## Demo
-[![](http://img.youtube.com/vi/YhKjv4WcaCY/29.jpg)](https://youtu.be/YhKjv4WcaCY?t=0s)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YhKjv4WcaCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<a href="https://youtu.be/YhKjv4WcaCY">
+  <img src="https://user-images.githubusercontent.com/16279779/57781106-7b440100-7764-11e9-842b-f244117d8123.png" width="500" />
+</a>
 
 ## Dependency
 
