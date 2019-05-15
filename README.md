@@ -1,8 +1,8 @@
 <img src="https://user-images.githubusercontent.com/16279779/57689028-b9182b00-7679-11e9-8b17-9f59d6160fa3.png" width="100" alt="menew">
 
-✨ME:NEW✨ is a helper for people who travel around and eat foreign's food.
+:sparkles:ME:NEW:sparkles: is a helper for people who travel around and eat foreign's food.
 
-:camera:PICK -> :bookmark_tabs:TRANSLATE -> :point_up_2:CHOOSE
+PICK :camera: -> TRANSLATE :bookmark_tabs: -> CHOOSE :point_up_2:
 
 ## Overview
 
