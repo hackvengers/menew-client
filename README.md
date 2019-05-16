@@ -18,7 +18,7 @@ PICK :camera: -> TRANSLATE :bookmark_tabs: -> CHOOSE :point_up_2:
 
 ME:NEW client has the dependencies for the following libraries:
 
-[![NPM](https://img.shields.io/badge/npm-6.8.0%2B-red.svg)](https://img.shields.io/badge/npm-6.8.0%2B-red.svg) [![Node](https://img.shields.io/badge/node-12.2.0%2B-brightgreen.svg)](https://img.shields.io/badge/node-12.2.0%2B-brightgreen.svg) [![React](https://img.shields.io/badge/react-16.8.0%2B-blue.svg)](https://img.shields.io/badge/react-16.8.0%2B-blue.svg)
+[![NPM](https://img.shields.io/badge/npm-v6.8.0%2B-red.svg)](https://img.shields.io/badge/npm-v6.8.0%2B-red.svg) [![Node](https://img.shields.io/badge/node-v12.2.0%2B-brightgreen.svg)](https://img.shields.io/badge/node-v12.2.0%2B-brightgreen.svg) [![React](https://img.shields.io/badge/react-v16.8.0%2B-blue.svg)](https://img.shields.io/badge/react-v16.8.0%2B-blue.svg)
 
 ## How to start developing ME:NEW client?
 
